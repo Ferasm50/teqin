@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>مشاهدة الكورس - منصة الدورات التعليمية</title>
+  <meta name="description" content="مشاهدة دروس الكورس وحل التمارين التفاعلية">
+  <meta name="keywords" content="مشاهدة كورس، دروس، فيديوهات، تمارين، تعلم">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <!-- Video.js for video player -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="course-player-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">منصتي التعليمية</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المنصة</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="instructors.html">المدربون</a></li>
+          <li><a href="my-purchases.html">مشترياتي</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+          <li class="dropdown"><a href="#"><span>صفحات أخرى</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">تفاصيل الكورس</a></li>
+              <li><a href="instructor-profile.html">ملف المدرب</a></li>
+              <li><a href="events.html">الفعاليات</a></li>
+              <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+              <li><a href="terms.html">الشروط</a></li>
+              <li><a href="privacy.html">الخصوصية</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="dropdown">
+        <a href="#" class="btn-getstarted dropdown-toggle" data-bs-toggle="dropdown">
+          أحمد محمد <i class="bi bi-chevron-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+          <li><a class="dropdown-item" href="my-purchases.html"><i class="bi bi-cart-check me-2"></i>مشترياتي</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-left me-2"></i>تسجيل الخروج</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title bg-light">
+      <div class="container d-lg-flex justify-content-between align-items-center py-4">
+        <div>
+          <h1 class="mb-2 mb-lg-0">تطوير تطبيقات الويب المتقدمة</h1>
+          <nav class="breadcrumbs">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+              <li class="breadcrumb-item"><a href="courses.html">الكورسات</a></li>
+              <li class="breadcrumb-item active">مشاهدة الكورس</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="progress me-3" style="width: 150px; height: 8px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 45%"></div>
+          </div>
+          <span class="text-muted">45% مكتمل</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="course-player" class="course-player section py-4">
+      <div class="container">
+        <div class="row">
+          
+          <!-- الجزء الرئيسي - مشغل الفيديو -->
+          <div class="col-lg-8 mb-4">
+            
+            <!-- مشغل الفيديو -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body p-0">
+                <div class="video-container position-relative">
+                  <video 
+                    id="course-video" 
+                    class="video-js vjs-big-play-centered w-100"
+                    controls
+                    preload="auto"
+                    poster="assets/img/education/courses-5.webp"
+                    data-setup='{"fluid": true}'
+                  >
+                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <p class="vjs-no-js">
+                      لمشاهدة هذا الفيديو، يرجى تمكين JavaScript، والنظر في الترقية إلى متصفح ويب يدعم
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">HTML5 video</a>
+                    </p>
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <!-- معلومات الدرس الحالي -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h4 class="mb-1">الدرس 3: مفاهيم JavaScript المتقدمة</h4>
+                    <p class="text-muted mb-0">مقدمة عن الوعود (Promises) و Async/Await</p>
+                  </div>
+                  <span class="badge bg-primary">28 دقيقة</span>
+                </div>
+                <p class="mb-3">في هذا الدرس، سنتعمق في مفاهيم JavaScript المتقدمة مثل الوعود (Promises) والبرمجة غير المتزامنة (Async/Await). هذه المفاهيم أساسية لبناء تطبيقات ويب سريعة وفعالة.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-primary">
+                    <i class="bi bi-download me-2"></i>تحميل المصادر
+                  </button>
+                  <button class="btn btn-outline-secondary">
+                    <i class="bi bi-chat-left-text me-2"></i>المناقشة
+                  </button>
+                  <button class="btn btn-outline-success">
+                    <i class="bi bi-flag me-2"></i>الإبلاغ عن مشكلة
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- تبويبات المحتوى -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-0">
+                <ul class="nav nav-tabs border-bottom" id="playerTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="exercises-tab" data-bs-toggle="tab" data-bs-target="#exercises" type="button" role="tab">
+                      <i class="bi bi-question-circle me-2"></i>التمارين
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab">
+                      <i class="bi bi-journal-text me-2"></i>الملاحظات
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="discussions-tab" data-bs-toggle="tab" data-bs-target="#discussions" type="button" role="tab">
+                      <i class="bi bi-chat-left-text me-2"></i>المناقشات
+                      <span class="badge bg-danger rounded-pill ms-2">3</span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" role="tab">
+                      <i class="bi bi-folder me-2"></i>الموارد
+                    </button>
+                  </li>
+                </ul>
+                
+                <div class="tab-content p-4" id="playerTabsContent">
+                  
+                  <!-- تبويب التمارين -->
+                  <div class="tab-pane fade show active" id="exercises" role="tabpanel">
+                    <h5 class="mb-4">تمرين فهم الدرس</h5>
+                    
+                    <div class="mb-4">
+                      <p class="fw-bold mb-3">سؤال 1: ما هو الهدف الرئيسي من استخدام الوعود (Promises) في JavaScript؟</p>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question1" id="q1a1">
+                        <label class="form-check-label" for="q1a1">
+                          لتسريع تنفيذ الكود
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question1" id="q1a2">
+                        <label class="form-check-label" for="q1a2">
+                          لإدارة العمليات غير المتزامنة بشكل أفضل
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question1" id="q1a3">
+                        <label class="form-check-label" for="q1a3">
+                          لتقليل حجم الكود
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question1" id="q1a4">
+                        <label class="form-check-label" for="q1a4">
+                          لتحسين أمان التطبيق
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <p class="fw-bold mb-3">سؤال 2: ما الفرق بين Async/Await والوعود (Promises)؟</p>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question2" id="q2a1">
+                        <label class="form-check-label" for="q2a1">
+                          لا يوجد فرق، نفس الشيء
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question2" id="q2a2">
+                        <label class="form-check-label" for="q2a2">
+                          Async/Await يجعل الكود يبدو متزامناً وأسهل للقراءة
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="question2" id="q2a3">
+                        <label class="form-check-label" for="q2a3">
+                          الوعود أسرع في التنفيذ
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-right me-2"></i>تخطي التمرين
+                      </button>
+                      <button class="btn btn-primary">
+                        <i class="bi bi-check-circle me-2"></i>تسليم الإجابات
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <!-- تبويب الملاحظات -->
+                  <div class="tab-pane fade" id="notes" role="tabpanel">
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="6" placeholder="اكتب ملاحظاتك هنا عن الدرس..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-trash me-2"></i>مسح
+                      </button>
+                      <button class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>حفظ الملاحظات
+                      </button>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <h6 class="mb-3">ملاحظات سابقة:</h6>
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                          <small class="text-muted">الدرس 2: مفاهيم ES6+</small>
+                          <small class="text-muted">منذ 3 أيام</small>
+                        </div>
+                        <p class="mb-0">مفاهيم مهمة: Arrow Functions, Destructuring, Template Literals</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- تبويب المناقشات -->
+                  <div class="tab-pane fade" id="discussions" role="tabpanel">
+                    <div class="mb-4">
+                      <textarea class="form-control mb-2" rows="3" placeholder="شارك في النقاش..."></textarea>
+                      <button class="btn btn-primary">نشر التعليق</button>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <img src="assets/img/person/person-m-1.webp" class="rounded-circle me-3" width="40" height="40" alt="صالح أحمد">
+                            <div class="flex-grow-1">
+                              <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                  <strong>صالح أحمد</strong>
+                                  <small class="text-muted ms-2">منذ ساعتين</small>
+                                </div>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                  <i class="bi bi-reply"></i> رد
+                                </button>
+                              </div>
+                              <p class="mb-0">شكراً على الشرح الواضح، هل يمكنك توضيح الفرق بين .then() و async/await بمثال عملي؟</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <img src="assets/img/person/person-f-2.webp" class="rounded-circle me-3" width="40" height="40" alt="فاطمة علي">
+                            <div class="flex-grow-1">
+                              <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                  <strong>فاطمة علي</strong>
+                                  <small class="text-muted ms-2">منذ يوم</small>
+                                </div>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                  <i class="bi bi-reply"></i> رد
+                                </button>
+                              </div>
+                              <p class="mb-0">الشرح رائع! هل هناك حالات يكون فيها استخدام Promises أفضل من async/await؟</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- تبويب الموارد -->
+                  <div class="tab-pane fade" id="resources" role="tabpanel">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="d-flex align-items-center">
+                              <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="bi bi-file-text text-primary fs-4"></i>
+                              </div>
+                              <div>
+                                <h6 class="mb-1">ملخص الدرس PDF</h6>
+                                <small class="text-muted">2.4 ميجابايت</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer bg-transparent">
+                            <button class="btn btn-sm btn-outline-primary w-100">
+                              <i class="bi bi-download me-2"></i>تحميل
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="d-flex align-items-center">
+                              <div class="bg-success bg-opacity-10 p-3 rounded me-3">
+                                <i class="bi bi-code-slash text-success fs-4"></i>
+                              </div>
+                              <div>
+                                <h6 class="mb-1">كود الأمثلة</h6>
+                                <small class="text-muted">ملف ZIP</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer bg-transparent">
+                            <button class="btn btn-sm btn-outline-success w-100">
+                              <i class="bi bi-download me-2"></i>تحميل
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- الشريط الجانبي - قائمة الدروس -->
+          <div class="col-lg-4">
+            
+            <!-- معلومات الكورس -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <img src="assets/img/person/person-m-1.webp" class="rounded-circle me-3" width="50" height="50" alt="المدرب">
+                  <div>
+                    <h6 class="mb-0">البروفيسور أحمد الحسيني</h6>
+                    <small class="text-muted">خبير تطوير الويب</small>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="bg-light rounded p-3 text-center">
+                      <div class="text-primary fw-bold">36</div>
+                      <small class="text-muted">درس</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="bg-light rounded p-3 text-center">
+                      <div class="text-primary fw-bold">24</div>
+                      <small class="text-muted">تمرين</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- قائمة الدروس -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-play-circle me-2"></i>قائمة الدروس</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="list-group list-group-flush" style="max-height: 500px; overflow-y: auto;">
+                  
+                  <!-- القسم 1 -->
+                  <div class="list-group-item bg-light">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <strong>القسم 1: أساسيات JavaScript</strong>
+                      <span class="badge bg-secondary">5 دروس</span>
+                    </div>
+                  </div>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-play-circle text-success me-2"></i>
+                        <span>المقدمة ومتطلبات الكورس</span>
+                      </div>
+                      <small class="text-muted">15 د</small>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-play-circle text-success me-2"></i>
+                        <span>المتغيرات والدوال</span>
+                      </div>
+                      <small class="text-muted">28 د</small>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="list-group-item list-group-item-action active">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-play-circle-fill text-primary me-2"></i>
+                        <span>مفاهيم JavaScript المتقدمة</span>
+                      </div>
+                      <small class="text-muted">42 د</small>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-lock text-muted me-2"></i>
+                        <span>تمرين تطبيقي: آلة حاسبة</span>
+                      </div>
+                      <small class="text-muted">تمرين</small>
+                    </div>
+                  </a>
+                  
+                  <!-- القسم 2 -->
+                  <div class="list-group-item bg-light">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <strong>القسم 2: تعمق في تطوير React</strong>
+                      <span class="badge bg-secondary">12 درس</span>
+                    </div>
+                  </div>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-lock text-muted me-2"></i>
+                        <span>المكونات وصيغة JSX</span>
+                      </div>
+                      <small class="text-muted">32 د</small>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-lock text-muted me-2"></i>
+                        <span>إدارة الحالة State</span>
+                      </div>
+                      <small class="text-muted">48 د</small>
+                    </div>
+                  </a>
+                  
+                  <!-- القسم 3 -->
+                  <div class="list-group-item bg-light">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <strong>القسم 3: Node.js والخادم</strong>
+                      <span class="badge bg-secondary">15 درس</span>
+                    </div>
+                  </div>
+                  
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <i class="bi bi-lock text-muted me-2"></i>
+                        <span>إعداد خادم Express.js</span>
+                      </div>
+                      <small class="text-muted">25 د</small>
+                    </div>
+                  </a>
+                  
+                  <!-- المزيد من الدروس -->
+                  <a href="#" class="list-group-item list-group-item-action text-center text-primary">
+                    <i class="bi bi-chevron-down me-2"></i>عرض المزيد من الدروس
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- أزرار التنقل -->
+            <div class="d-grid gap-2 mt-3">
+              <button class="btn btn-primary">
+                <i class="bi bi-check-circle me-2"></i>تمييز الدرس كمكتمل
+              </button>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary flex-fill">
+                  <i class="bi bi-arrow-right me-2"></i>التالي
+                </button>
+                <button class="btn btn-outline-secondary flex-fill">
+                  <i class="bi bi-arrow-left me-2"></i>السابق
+                </button>
+              </div>
+              <a href="course-details.html" class="btn btn-outline-secondary">
+                <i class="bi bi-info-circle me-2"></i>عرض تفاصيل الكورس
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer bg-dark text-white">
+    <div class="container footer-top py-5">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">منصتي التعليمية</span>
+          </a>
+          <p class="mt-3">منصة تعليمية عربية تقدم دورات تدريبية عالية الجودة في مختلف المجالات التقنية والمهنية.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4 class="text-white">روابط سريعة</h4>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2"><a href="index.html" class="text-light">الرئيسية</a></li>
+            <li class="mb-2"><a href="courses.html" class="text-light">الكورسات</a></li>
+            <li class="mb-2"><a href="instructors.html" class="text-light">المدربون</a></li>
+            <li class="mb-2"><a href="my-purchases.html" class="text-light">مشترياتي</a></li>
+            <li><a href="reviews.html" class="text-light">التقييمات</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4 class="text-white">فئات الكورسات</h4>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2"><a href="#" class="text-light">تطوير الويب</a></li>
+            <li class="mb-2"><a href="#" class="text-light">علم البيانات</a></li>
+            <li class="mb-2"><a href="#" class="text-light">التسويق الرقمي</a></li>
+            <li class="mb-2"><a href="#" class="text-light">التصميم</a></li>
+            <li><a href="#" class="text-light">الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact">
+          <h4 class="text-white">معلومات الاتصال</h4>
+          <p class="mt-3">الرياض، المملكة العربية السعودية</p>
+          <p class="mt-3"><strong>البريد الإلكتروني:</strong> <span>info@eduplatform.com</span></p>
+          <p><strong>الدعم الفني:</strong> <span>support@eduplatform.com</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center py-4">
+      <p class="mb-0">© <span>جميع الحقوق محفوظة لـ</span> <strong class="px-1 sitename">منصتي التعليمية</strong> <span>2024</span></p>
+    </div>
+  </footer>
+
+  <!-- أزرار التنقل العائمة -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+    <div class="d-flex flex-column gap-2">
+      <button class="btn btn-primary btn-lg rounded-circle shadow">
+        <i class="bi bi-question-circle"></i>
+      </button>
+      <button class="btn btn-info btn-lg rounded-circle shadow" data-bs-toggle="offcanvas" data-bs-target="#notesOffcanvas">
+        <i class="bi bi-journal-text"></i>
+      </button>
+      <a href="#header" class="btn btn-secondary btn-lg rounded-circle shadow">
+        <i class="bi bi-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Offcanvas للملاحظات -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="notesOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">ملاحظاتي</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <textarea class="form-control mb-3" rows="10" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+      <button class="btn btn-primary w-100">حفظ الملاحظات</button>
+    </div>
+  </div>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Video.js Script -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // تهيئة مشغل الفيديو
+      const player = videojs('course-video');
+      
+      // تحميل الفيديو حسب الدرس المحدد
+      function loadVideo(lessonId) {
+        // هنا يمكن إضافة منطق لتحميل الفيديو المناسب
+        console.log('جاري تحميل الفيديو للدرس:', lessonId);
+      }
+      
+      // إدارة تنفيذ الدرس كمكتمل
+      document.querySelector('.btn-primary').addEventListener('click', function() {
+        const btn = this;
+        const originalText = btn.innerHTML;
+        
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>جاري التحميل...';
+        btn.disabled = true;
+        
+        setTimeout(() => {
+          btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>تم إكمال الدرس';
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-success');
+          
+          // تحديث شريط التقدم
+          const progressBar = document.querySelector('.progress-bar');
+          const currentWidth = parseInt(progressBar.style.width);
+          progressBar.style.width = (currentWidth + 5) + '%';
+          
+          // تحديث النسبة المئوية
+          const progressText = document.querySelector('.text-muted');
+          const currentPercent = parseInt(progressText.textContent);
+          progressText.textContent = (currentPercent + 5) + '% مكتمل';
+        }, 1500);
+      });
+      
+      // إدارة التمارين
+      const exerciseRadios = document.querySelectorAll('input[type="radio"]');
+      exerciseRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          // إزالة التأثير من جميع الخيارات
+          document.querySelectorAll('.form-check').forEach(item => {
+            item.classList.remove('bg-success', 'bg-opacity-10');
+          });
+          
+          // إضافة تأثير للخيار المحدد
+          this.closest('.form-check').classList.add('bg-success', 'bg-opacity-10');
+        });
+      });
+      
+      // إرسال الإجابات
+      document.querySelector('.btn-primary[type="button"]').addEventListener('click', function() {
+        const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+        
+        if (selectedAnswers.length < 2) {
+          alert('يرجى الإجابة على جميع الأسئلة قبل التسليم');
+          return;
+        }
+        
+        // محاكاة تصحيح الإجابات
+        const correctAnswers = ['q1a2', 'q2a2'];
+        let score = 0;
+        
+        selectedAnswers.forEach(answer => {
+          if (correctAnswers.includes(answer.id)) {
+            score++;
+          }
+        });
+        
+        alert(`تم تسليم إجاباتك!\nالنتيجة: ${score}/2 (${(score/2*100).toFixed(0)}%)`);
+      });
+      
+      // إدارة الملاحظات
+      const notesTextarea = document.querySelector('#notes textarea');
+      const saveNotesBtn = document.querySelector('#notes .btn-primary');
+      
+      saveNotesBtn.addEventListener('click', function() {
+        if (notesTextarea.value.trim() === '') {
+          alert('يرجى كتابة ملاحظات قبل الحفظ');
+          return;
+        }
+        
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>جاري الحفظ...';
+        
+        setTimeout(() => {
+          this.innerHTML = '<i class="bi bi-check-circle me-2"></i>تم الحفظ';
+          setTimeout(() => {
+            this.innerHTML = originalText;
+          }, 2000);
+        }, 1000);
+      });
+      
+      // إدارة التعليقات
+      const commentTextarea = document.querySelector('#discussions textarea');
+      const postCommentBtn = document.querySelector('#discussions .btn-primary');
+      
+      postCommentBtn.addEventListener('click', function() {
+        if (commentTextarea.value.trim() === '') {
+          alert('يرجى كتابة تعليق قبل النشر');
+          return;
+        }
+        
+        // هنا يمكن إضافة منطق إرسال التعليق
+        alert('تم نشر تعليقك بنجاح');
+        commentTextarea.value = '';
+      });
+      
+      // تهيئة AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // تحديث شريط التقدم بشكل ديناميكي
+      function updateProgress() {
+        // هنا يمكن إضافة منطق لتحديث التقدم من الخادم
+        console.log('تحديث التقدم...');
+      }
+      
+      // تحديث التقدم كل دقيقة
+      setInterval(updateProgress, 60000);
+    });
+  </script>
+
+</body>
+</html>

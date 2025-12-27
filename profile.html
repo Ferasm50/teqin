@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - منصتي التعليمية</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <!-- المحتوى الرئيسي -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <!-- بطاقة الملف الشخصي -->
+                <div class="card shadow">
+                    <!-- رأس البطاقة -->
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0"><i class="bi bi-person-circle me-2"></i>الملف الشخصي</h3>
+                    </div>
+                    
+                    <!-- جسم البطاقة -->
+                    <div class="card-body p-4">
+                        <!-- الصورة والاسم -->
+                        <div class="text-center mb-4">
+                            <div class="mb-3">
+                                <img src="https://via.placeholder.com/150" 
+                                     class="rounded-circle border border-4 border-primary shadow-sm" 
+                                     width="120" height="120" 
+                                     alt="صورة المستخدم"
+                                     id="profileImage">
+                            </div>
+                            
+                            <h4 class="card-title mb-1">أحمد محمد</h4>
+                            <p class="text-muted mb-3">طالب - قسم علوم الحاسوب</p>
+                            
+                            <!-- زر تغيير الصورة -->
+                            <button class="btn btn-outline-primary btn-sm mb-4" onclick="changeProfileImage()">
+                                <i class="bi bi-camera me-1"></i>تغيير الصورة
+                            </button>
+                        </div>
+                        
+                        <!-- فورم تعديل البيانات -->
+                        <h5 class="border-bottom pb-2 mb-4">تعديل البيانات الشخصية</h5>
+                        
+                        <form id="profileForm" onsubmit="saveChanges(event)">
+                            <!-- الاسم -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">الاسم الكامل</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="name" 
+                                           value="أحمد محمد"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- البريد الإلكتروني -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           value="ahmed@example.com"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- رقم الهاتف -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">رقم الهاتف</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-phone"></i>
+                                    </span>
+                                    <input type="tel" 
+                                           class="form-control" 
+                                           id="phone" 
+                                           value="+966501234567"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- تاريخ الميلاد -->
+                            <div class="mb-3">
+                                <label for="birthDate" class="form-label">تاريخ الميلاد</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-calendar"></i>
+                                    </span>
+                                    <input type="date" 
+                                           class="form-control" 
+                                           id="birthDate" 
+                                           value="1995-05-15"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- الجنس -->
+                            <div class="mb-3">
+                                <label class="form-label">الجنس</label>
+                                <div class="d-flex">
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="ذكر" checked>
+                                        <label class="form-check-label" for="male">ذكر</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="أنثى">
+                                        <label class="form-check-label" for="female">أنثى</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- البلد -->
+                            <div class="mb-3">
+                                <label for="country" class="form-label">البلد</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-globe"></i>
+                                    </span>
+                                    <select class="form-select" id="country" required>
+                                        <option value="" disabled>اختر البلد</option>
+                                        <option value="SA" selected>المملكة العربية السعودية</option>
+                                        <option value="AE">الإمارات العربية المتحدة</option>
+                                        <option value="EG">مصر</option>
+                                        <option value="KW">الكويت</option>
+                                        <option value="QA">قطر</option>
+                                        <option value="OM">عمان</option>
+                                        <option value="BH">البحرين</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- المدينة -->
+                            <div class="mb-3">
+                                <label for="city" class="form-label">المدينة</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </span>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="city" 
+                                           value="الرياض"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- التخصص -->
+                            <div class="mb-3">
+                                <label for="major" class="form-label">التخصص</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-book"></i>
+                                    </span>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="major" 
+                                           value="علوم الحاسوب"
+                                           required>
+                                </div>
+                            </div>
+                            
+                            <!-- الوصف -->
+                            <div class="mb-4">
+                                <label for="bio" class="form-label">نبذة عني</label>
+                                <div class="input-group">
+                                    <span class="input-group-text align-items-start pt-3">
+                                        <i class="bi bi-pencil"></i>
+                                    </span>
+                                    <textarea class="form-control" 
+                                              id="bio" 
+                                              rows="3"
+                                              placeholder="اكتب نبذة مختصرة عن نفسك...">طالب في السنة الثالثة بكلية علوم الحاسوب، مهتم بتطوير الويب وتعلم اللغات البرمجية الحديثة.</textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- أزرار الإجراء -->
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
+                                    <i class="bi bi-arrow-clockwise me-1"></i>إعادة تعيين
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-save me-1"></i>حفظ التغييرات
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- تذييل البطاقة -->
+                    <div class="card-footer text-center py-3 bg-light">
+                        <small class="text-muted">
+                            آخر تحديث: <span id="lastUpdate">٢٥ مارس ٢٠٢٤</span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // دالة لتغيير صورة الملف الشخصي
+        function changeProfileImage() {
+            const imageUrl = prompt("أدخل رابط الصورة الجديدة:", "https://via.placeholder.com/150");
+            if (imageUrl) {
+                document.getElementById('profileImage').src = imageUrl;
+                showAlert('تم تغيير صورة الملف الشخصي بنجاح!', 'success');
+            }
+        }
+        
+        // دالة لحفظ التغييرات
+        function saveChanges(event) {
+            event.preventDefault();
+            
+            // جمع البيانات من الفورم
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                birthDate: document.getElementById('birthDate').value,
+                gender: document.querySelector('input[name="gender"]:checked').value,
+                country: document.getElementById('country').value,
+                city: document.getElementById('city').value,
+                major: document.getElementById('major').value,
+                bio: document.getElementById('bio').value
+            };
+            
+            // هنا يمكنك إرسال البيانات إلى الخادم
+            console.log('بيانات المستخدم المحفوظة:', formData);
+            
+            // تحديث التاريخ الأخير
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('lastUpdate').textContent = now.toLocaleDateString('ar-SA', options);
+            
+            // عرض رسالة نجاح
+            showAlert('تم حفظ التغييرات بنجاح!', 'success');
+            
+            // تحديث اسم المستخدم أعلى الصفحة
+            document.querySelector('.card-title').textContent = formData.name;
+            
+            return false;
+        }
+        
+        // دالة لإعادة تعيين الفورم
+        function resetForm() {
+            if (confirm('هل تريد إعادة تعيين جميع الحقول إلى القيم الأصلية؟')) {
+                document.getElementById('profileForm').reset();
+                showAlert('تم إعادة تعيين النموذج', 'info');
+            }
+        }
+        
+        // دالة لعرض رسائل التنبيه
+        function showAlert(message, type) {
+            // إنشاء عنصر التنبيه
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            alertDiv.style.top = '20px';
+            alertDiv.style.left = '50%';
+            alertDiv.style.transform = 'translateX(-50%)';
+            alertDiv.style.zIndex = '1050';
+            alertDiv.style.maxWidth = '500px';
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            // إضافة التنبيه إلى الصفحة
+            document.body.appendChild(alertDiv);
+            
+            // إزالة التنبيه تلقائياً بعد 3 ثوان
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 3000);
+        }
+        
+        // تهيئة الصفحة عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديث التاريخ الحالي
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('lastUpdate').textContent = now.toLocaleDateString('ar-SA', options);
+            
+            // إضافة تأثير عند تحميل الصفحة
+            const card = document.querySelector('.card');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+            
+            // إضافة التحقق من صحة البريد الإلكتروني
+            const emailInput = document.getElementById('email');
+            emailInput.addEventListener('blur', function() {
+                const email = this.value;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (email && !emailPattern.test(email)) {
+                    this.classList.add('is-invalid');
+                    showAlert('يرجى إدخال بريد إلكتروني صحيح', 'danger');
+                } else {
+                    this.classList.remove('is-invalid');
+                }
+            });
+            
+            // إضافة التحقق من رقم الهاتف
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('blur', function() {
+                const phone = this.value;
+                const phonePattern = /^[\+]?[0-9]{10,15}$/;
+                
+                if (phone && !phonePattern.test(phone.replace(/\s+/g, ''))) {
+                    this.classList.add('is-invalid');
+                    showAlert('يرجى إدخال رقم هاتف صحيح', 'danger');
+                } else {
+                    this.classList.remove('is-invalid');
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        /* تخصيصات بسيطة فقط باستخدام Bootstrap */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            border-bottom: none;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: #4361ee;
+            box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
+        }
+        
+        .input-group-text {
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+        
+        .btn-primary {
+            background-color: #4361ee;
+            border-color: #4361ee;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a0ca3;
+            border-color: #3a0ca3;
+        }
+        
+        .btn-outline-primary {
+            color: #4361ee;
+            border-color: #4361ee;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: #4361ee;
+            border-color: #4361ee;
+        }
+    </style>
+</body>
+</html>

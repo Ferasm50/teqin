@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>إتمام عملية الشراء - منصة الدورات التعليمية</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="enroll-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">منصتي التعليمية</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المنصة</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="instructors.html">المدربون</a></li>
+          <li><a href="transactions.html">المعاملات</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+          <li class="dropdown"><a href="#"><span>صفحات أخرى</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">تفاصيل الكورس</a></li>
+              <li><a href="instructor-profile.html">ملف المدرب</a></li>
+              <li><a href="events.html">الفعاليات</a></li>
+              <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+              <li><a href="terms.html">الشروط</a></li>
+              <li><a href="privacy.html">الخصوصية</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.html">تسجيل الدخول</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">إتمام عملية الشراء</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li class="current">إتمام الشراء</li>
+          </ol>
+        </nav>
+      </div>
+    </div><section id="enroll" class="enroll section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-7">
+
+            <div class="enroll-details">
+
+              <form action="#" method="post" class="enroll-form" id="payment-form" enctype="multipart/form-data">
+
+                <div class="price-summary mb-5">
+                  <h4>ملخص الفاتورة</h4>
+                  <div class="d-flex justify-content-between">
+                    <span>سعر الكورس:</span>
+                    <span id="course-price" class="fw-bold">$149.00</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>الرسوم الإدارية:</span>
+                    <span class="fw-bold">$5.00</span>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between total-price">
+                    <span class="fs-5">الإجمالي المستحق:</span>
+                    <span id="total-price" class="fs-5 fw-bold text-success">$154.00</span>
+                  </div>
+                </div>
+
+                <h2 class="mt-5">معلومات الدفع</h2>
+
+                <div class="form-group mt-3">
+                  <label for="transfer-number" class="form-label">رقم الحوالة البنكية *</label>
+                  <input type="text" class="form-control" name="transfer-number" id="transfer-number" placeholder="أدخل رقم الحوالة البنكية" required>
+                  <small class="text-muted">يجب أن يتطابق رقم الحوالة مع رقم الحوالة في صورة الإيصال</small>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-6 form-group">
+                    <label for="sender-name" class="form-label">اسم المرسل (صاحب الحساب) *</label>
+                    <input type="text" name="sender-name" id="sender-name" class="form-control" placeholder="اسم المرسل كما في الحساب البنكي" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label for="bank-name" class="form-label">اسم البنك أو المحفظة *</label>
+                    <input type="text" name="bank-name" id="bank-name" class="form-control" placeholder="اسم البنك أو المحفظة الإلكترونية" required>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="transfer-image" class="form-label">صورة إيصال الدفع *</label>
+                  <input type="file" class="form-control" name="transfer-image" id="transfer-image" accept="image/*" required>
+                  <small class="text-muted">يرجى رفع صورة واضحة لإيصال الدفع أو الحوالة البنكية</small>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="payment-method" class="form-label">طريقة الدفع *</label>
+                  <select class="form-control" name="payment-method" id="payment-method" required>
+                    <option value="">اختر طريقة الدفع</option>
+                    <option value="bank-transfer">حوالة بنكية</option>
+                    <option value="stc-pay">STC Pay</option>
+                    <option value="mada">مدى</option>
+                    <option value="apple-pay">Apple Pay</option>
+                    <option value="other">أخرى</option>
+                  </select>
+                </div>
+
+                <div class="form-check mt-4">
+                  <input class="form-check-input" type="checkbox" value="" id="agree-terms" required>
+                  <label class="form-check-label" for="agree-terms">
+                    أوافق على <a href="terms.html">شروط الخدمة</a> و <a href="privacy.html">سياسة الخصوصية</a>.
+                  </label>
+                </div>
+
+                <div class="alert alert-info mt-4">
+                  <i class="bi bi-info-circle me-2"></i>
+                  <strong>ملاحظة:</strong> سيتم مراجعة معاملتك من قبل المدير قبل تفعيل الكورس. ستصلك إشعار عند الموافقة.
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn-enroll">إتمام الشراء ورفع الإيصال</button>
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 sidebar">
+            <div class="enrollment-summary-card" data-aos="fade-up" data-aos-delay="200">
+              <h4>تفاصيل الاشتراك</h4>
+              <div class="course-summary mb-4">
+                <div class="d-flex align-items-center">
+                  <img src="assets/img/education/courses-8.webp" alt="الكورس" class="course-thumb me-3" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px;">
+                  <div>
+                    <h6 class="mb-1">إتقان تطوير الويب المتكامل</h6>
+                    <p class="mb-0 text-muted">البروفيسور مايكل رودريغيز</p>
+                  </div>
+                </div>
+              </div>
+              <p>بعد إتمام عملية الدفع والموافقة على المعاملة، ستحصل على:</p>
+              <ul class="summary-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>وصول كامل لمحتوى الكورس والدروس.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>إمكانية حل التمارين والاختبارات.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>وصول مدى الحياة وتحديثات الكورس.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>شهادة إتمام عند الانتهاء من الكورس.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>دعم فني من خلال المنصة.</span>
+                </li>
+              </ul>
+
+              <div class="status-timeline mt-4">
+                <h6>مراحل تفعيل الكورس:</h6>
+                <div class="timeline">
+                  <div class="timeline-step">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <strong>1. إتمام الدفع</strong>
+                      <small>رفع إيصال الدفع</small>
+                    </div>
+                  </div>
+                  <div class="timeline-step">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <strong>2. مراجعة المدير</strong>
+                      <small>مراجعة الإيصال والموافقة</small>
+                    </div>
+                  </div>
+                  <div class="timeline-step">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                      <strong>3. تفعيل الكورس</strong>
+                      <small>البدء في التعلم</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guarantee-box mt-4">
+                <i class="bi bi-shield-lock"></i>
+                <h5>دفع آمن</h5>
+                <p>جميع معاملاتك محمية. استرداد الأموال متاح خلال 7 أيام إذا لم يتم تفعيل الكورس.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section></main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">منصتي التعليمية</span>
+          </a>
+          <p>منصة تعليمية عربية تقدم دورات تدريبية عالية الجودة في مختلف المجالات التقنية والمهنية.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="courses.html">الكورسات</a></li>
+            <li><a href="instructors.html">المدربون</a></li>
+            <li><a href="transactions.html">المعاملات</a></li>
+            <li><a href="reviews.html">التقييمات</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>فئات الكورسات</h4>
+          <ul>
+            <li><a href="#">تطوير الويب</a></li>
+            <li><a href="#">علم البيانات</a></li>
+            <li><a href="#">التسويق الرقمي</a></li>
+            <li><a href="#">التصميم</a></li>
+            <li><a href="#">الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>معلومات الاتصال</h4>
+          <p>الرياض، المملكة العربية السعودية</p>
+          <p class="mt-4"><strong>البريد الإلكتروني:</strong> <span>info@eduplatform.com</span></p>
+          <p><strong>الدعم الفني:</strong> <span>support@eduplatform.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>جميع الحقوق محفوظة لـ</span> <strong class="px-1 sitename">منصتي التعليمية</strong> <span>2024</span></p>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // JavaScript لتحديث السعر
+    document.addEventListener('DOMContentLoaded', function() {
+      const coursePrice = 149.00;
+      const fees = 5.00;
+      const totalPrice = coursePrice + fees;
+      
+      document.getElementById('course-price').textContent = '$' + coursePrice.toFixed(2);
+      document.getElementById('total-price').textContent = '$' + totalPrice.toFixed(2);
+    });
+  </script>
+
+</body>
+
+</html>

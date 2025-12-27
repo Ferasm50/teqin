@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>مشترياتي ومعاملاتي - منصة الدورات التعليمية</title>
+  <meta name="description" content="إدارة مشترياتك ومراقبة حالة المعاملات المالية للكورسات التعليمية">
+  <meta name="keywords" content="مشتريات، معاملات، كورشات، تعليم، متابعة، دفع">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .purchases-page {
+      background-color: #f8f9fa;
+    }
+    
+    /* تخصيص التبويبات */
+    .purchases-tabs .nav-link {
+      color: #495057;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      margin: 0 5px;
+      font-weight: 500;
+      transition: all 0.3s;
+      border-bottom: 3px solid transparent;
+    }
+    
+    .purchases-tabs .nav-link.active {
+      color: #007bff;
+      background-color: rgba(0, 123, 255, 0.1);
+      border-bottom: 3px solid #007bff;
+    }
+    
+    .purchases-tabs .nav-link:hover:not(.active) {
+      background-color: #f8f9fa;
+    }
+    
+    /* تصميم الكروت */
+    .purchase-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    
+    .purchase-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .course-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    /* بادجات الحالة */
+    .status-badge {
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin: 5px 0;
+    }
+    
+    .status-pending {
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeaa7;
+    }
+    
+    .status-approved {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .status-active {
+      background: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+    }
+    
+    .status-rejected {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .status-completed {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    /* خطوات العملية */
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin: 30px 0;
+      padding: 20px 0;
+    }
+    
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #e9ecef;
+      z-index: 1;
+    }
+    
+    .step {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      flex: 1;
+    }
+    
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-weight: bold;
+      color: #6c757d;
+    }
+    
+    .step.active .step-number {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    
+    .step.completed .step-number {
+      background: #28a745;
+      color: white;
+      border-color: #28a745;
+    }
+    
+    .step-label {
+      font-size: 0.85rem;
+      color: #6c757d;
+      font-weight: 500;
+    }
+    
+    /* بطاقات السلة */
+    .cart-item-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    .cart-item-image {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    
+    .price-tag {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    /* الإحصائيات */
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      background: #007bff;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 1.5rem;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #007bff;
+      margin: 10px 0;
+    }
+    
+    /* العملات الجانبية */
+    .sidebar-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body class="purchases-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">منصتي التعليمية</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المنصة</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="instructors.html">المدربون</a></li>
+          <li><a href="my-purchases.html" class="active">مشترياتي</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+          <li class="dropdown"><a href="#"><span>صفحات أخرى</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">تفاصيل الكورس</a></li>
+              <li><a href="instructor-profile.html">ملف المدرب</a></li>
+              <li><a href="events.html">الفعاليات</a></li>
+              <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+              <li><a href="terms.html">الشروط</a></li>
+              <li><a href="privacy.html">الخصوصية</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.html">تسجيل الدخول</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">مشترياتي ومعاملاتي</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li class="current">مشترياتي</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="my-purchases" class="my-purchases section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- الإحصائيات السريعة -->
+        <div class="row mb-5" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bi bi-cart-check"></i>
+              </div>
+              <div class="stat-number">5</div>
+              <p>الكورسات المشتراة</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="stat-number">2</div>
+              <p>قيد المراجعة</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="stat-number">3</div>
+              <p>قيد الدراسة</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div class="stat-number">1</div>
+              <p>مكتملة</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- تبويبات الصفحة -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <ul class="nav purchases-tabs" id="purchasesTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="cart-tab" data-bs-toggle="tab" data-bs-target="#cart" type="button" role="tab">
+                  <i class="bi bi-cart3 me-2"></i>سلة المشتريات
+                  <span class="badge bg-primary ms-2">2</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="transactions-tab" data-bs-toggle="tab" data-bs-target="#transactions" type="button" role="tab">
+                  <i class="bi bi-credit-card me-2"></i>المعاملات
+                  <span class="badge bg-primary ms-2">8</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab">
+                  <i class="bi bi-play-circle me-2"></i>الكورسات النشطة
+                  <span class="badge bg-primary ms-2">3</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button" role="tab">
+                  <i class="bi bi-award me-2"></i>المكتملة
+                  <span class="badge bg-primary ms-2">1</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- محتوى التبويبات -->
+        <div class="tab-content" id="purchasesTabContent">
+
+          <!-- تبويب سلة المشتريات -->
+          <div class="tab-pane fade show active" id="cart" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="section-header">
+                  <h3><i class="bi bi-cart3 me-2"></i>سلة المشتريات الحالية</h3>
+                  <p class="text-muted">كورسات قيد الانتظار للشراء</p>
+                </div>
+
+                <!-- عناصر السلة -->
+                <div class="cart-item-card" data-aos="fade-up">
+                  <div class="row align-items-center">
+                    <div class="col-md-2">
+                      <img src="assets/img/education/courses-5.webp" alt="كورس تطوير الويب" class="cart-item-image">
+                    </div>
+                    <div class="col-md-5">
+                      <h5>تطوير تطبيقات الويب المتقدمة</h5>
+                      <p class="text-muted mb-1">البروفيسور أحمد الحسيني</p>
+                      <div class="course-meta">
+                        <small class="text-muted"><i class="bi bi-clock me-1"></i>8 أسابيع</small>
+                        <small class="text-muted ms-3"><i class="bi bi-question-circle me-1"></i>24 تمرين</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                      <div class="price-tag">$149</div>
+                      <small class="text-muted">قبل الخصم: $199</small>
+                    </div>
+                    <div class="col-md-2 text-end">
+                      <button class="btn btn-outline-danger btn-sm">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-item-card" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row align-items-center">
+                    <div class="col-md-2">
+                      <img src="assets/img/education/courses-8.webp" alt="كورس علم البيانات" class="cart-item-image">
+                    </div>
+                    <div class="col-md-5">
+                      <h5>علم البيانات وتحليل المعلومات</h5>
+                      <p class="text-muted mb-1">الدكتورة سارة محمد</p>
+                      <div class="course-meta">
+                        <small class="text-muted"><i class="bi bi-clock me-1"></i>10 أسابيع</small>
+                        <small class="text-muted ms-3"><i class="bi bi-question-circle me-1"></i>30 تمرين</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                      <div class="price-tag">$129</div>
+                      <small class="text-muted">قبل الخصم: $179</small>
+                    </div>
+                    <div class="col-md-2 text-end">
+                      <button class="btn btn-outline-danger btn-sm">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-4">
+                <div class="sidebar-card" data-aos="fade-left">
+                  <h5>ملخص الطلب</h5>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>سعر الكورسات:</span>
+                      <span>$278.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>الخصم:</span>
+                      <span class="text-success">-$80.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>الرسوم الإدارية:</span>
+                      <span>$10.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                      <strong>الإجمالي:</strong>
+                      <strong class="text-primary">$208.00</strong>
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <a href="enroll.html" class="btn btn-primary">إتمام عملية الشراء</a>
+                    <a href="courses.html" class="btn btn-outline-primary">إضافة المزيد من الكورسات</a>
+                  </div>
+                  <div class="alert alert-info mt-3">
+                    <i class="bi bi-info-circle me-2"></i>
+                    بعد الشراء، ستحتاج إلى رفع إيصال الدفع لمراجعته من قبل المدير.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- تبويب المعاملات -->
+          <div class="tab-pane fade" id="transactions" role="tabpanel">
+            <div class="section-header">
+              <h3><i class="bi bi-credit-card me-2"></i>سجل المعاملات المالية</h3>
+              <p class="text-muted">جميع المعاملات السابقة والحالية</p>
+            </div>
+
+            <div class="row">
+              <!-- معاملة قيد المراجعة -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-5.webp" alt="كورس تطوير الويب" class="course-thumb">
+                  <div class="p-4">
+                    <h5>تطوير تطبيقات الويب المتقدمة</h5>
+                    <p class="text-muted mb-2">البروفيسور أحمد الحسيني</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-pending">
+                        <i class="bi bi-clock me-1"></i>قيد المراجعة
+                      </span>
+                    </div>
+                    
+                    <div class="process-steps">
+                      <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-label">الدفع</div>
+                      </div>
+                      <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-label">المراجعة</div>
+                      </div>
+                      <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">التفعيل</div>
+                      </div>
+                    </div>
+                    
+                    <div class="transaction-details">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-muted">رقم المعاملة:</small>
+                          <p class="mb-1"><strong>TRX-2024-0012</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">المبلغ:</small>
+                          <p class="mb-1"><strong>$149.00</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">التاريخ:</small>
+                          <p class="mb-1">15 ديسمبر 2024</p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">طريقة الدفع:</small>
+                          <p class="mb-1">حوالة بنكية</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="alert alert-warning mt-3">
+                      <i class="bi bi-clock-history me-2"></i>
+                      <small>جاري مراجعة إيصال الدفع من قبل المدير</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- معاملة مرفوضة -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-9.webp" alt="كورس التصميم" class="course-thumb">
+                  <div class="p-4">
+                    <h5>التصميم الجرافيكي المتقدم</h5>
+                    <p class="text-muted mb-2">المصممة نورة عبدالله</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-rejected">
+                        <i class="bi bi-x-circle me-1"></i>مرفوضة
+                      </span>
+                    </div>
+                    
+                    <div class="process-steps">
+                      <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-label">الدفع</div>
+                      </div>
+                      <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">المراجعة</div>
+                      </div>
+                      <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">التفعيل</div>
+                      </div>
+                    </div>
+                    
+                    <div class="transaction-details">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-muted">رقم المعاملة:</small>
+                          <p class="mb-1"><strong>TRX-2024-0010</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">المبلغ:</small>
+                          <p class="mb-1"><strong>$99.00</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">التاريخ:</small>
+                          <p class="mb-1">10 ديسمبر 2024</p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">طريقة الدفع:</small>
+                          <p class="mb-1">STC Pay</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="alert alert-danger mt-3">
+                      <i class="bi bi-exclamation-triangle me-2"></i>
+                      <small>صورة الإيصال غير واضحة، يرجى إعادة الرفع</small>
+                    </div>
+                    
+                    <button class="btn btn-outline-primary w-100 mt-2">إعادة رفع الإيصال</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- معاملة مكتملة -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-12.webp" alt="كورس التسويق" class="course-thumb">
+                  <div class="p-4">
+                    <h5>التسويق الرقمي المتكامل</h5>
+                    <p class="text-muted mb-2">الخبير محمد العتيبي</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-completed">
+                        <i class="bi bi-check-circle me-1"></i>مكتملة
+                      </span>
+                    </div>
+                    
+                    <div class="process-steps">
+                      <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-label">الدفع</div>
+                      </div>
+                      <div class="step completed">
+                        <div class="step-number">2</div>
+                        <div class="step-label">المراجعة</div>
+                      </div>
+                      <div class="step completed">
+                        <div class="step-number">3</div>
+                        <div class="step-label">التفعيل</div>
+                      </div>
+                    </div>
+                    
+                    <div class="transaction-details">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-muted">رقم المعاملة:</small>
+                          <p class="mb-1"><strong>TRX-2024-0008</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">المبلغ:</small>
+                          <p class="mb-1"><strong>$179.00</strong></p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">التاريخ:</small>
+                          <p class="mb-1">5 ديسمبر 2024</p>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-muted">طريقة الدفع:</small>
+                          <p class="mb-1">حوالة بنكية</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="alert alert-success mt-3">
+                      <i class="bi bi-check-circle me-2"></i>
+                      <small>تم تفعيل الكورس بنجاح وبدأ الدراسة</small>
+                    </div>
+                    
+                    <a href="course-details.html" class="btn btn-primary w-100 mt-2">الذهاب للكورس</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- تبويب الكورسات النشطة -->
+          <div class="tab-pane fade" id="active" role="tabpanel">
+            <div class="section-header">
+              <h3><i class="bi bi-play-circle me-2"></i>الكورسات النشطة</h3>
+              <p class="text-muted">الكورسات التي تم تفعيلها وجاري دراستها</p>
+            </div>
+
+            <div class="row">
+              <!-- كورس نشط -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-12.webp" alt="كورس التسويق" class="course-thumb">
+                  <div class="p-4">
+                    <h5>التسويق الرقمي المتكامل</h5>
+                    <p class="text-muted mb-2">الخبير محمد العتيبي</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-active">
+                        <i class="bi bi-play-circle me-1"></i>قيد الدراسة
+                      </span>
+                    </div>
+                    
+                    <div class="progress mb-3" style="height: 8px;">
+                      <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                      <small>65% مكتمل</small>
+                      <small>13/20 درس</small>
+                    </div>
+                    
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <small class="text-muted">تاريخ البدء:</small>
+                        <p class="mb-1">6 ديسمبر 2024</p>
+                      </div>
+                      <div class="col-6">
+                        <small class="text-muted">آخر نشاط:</small>
+                        <p class="mb-1">اليوم</p>
+                      </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                      <a href="course-details.html" class="btn btn-primary">استكمال الدراسة</a>
+                      <button class="btn btn-outline-primary">عرض التقدم</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- كورس آخر نشط -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-8.webp" alt="كورس علم البيانات" class="course-thumb">
+                  <div class="p-4">
+                    <h5>علم البيانات وتحليل المعلومات</h5>
+                    <p class="text-muted mb-2">الدكتورة سارة محمد</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-active">
+                        <i class="bi bi-play-circle me-1"></i>قيد الدراسة
+                      </span>
+                    </div>
+                    
+                    <div class="progress mb-3" style="height: 8px;">
+                      <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                      <small>30% مكتمل</small>
+                      <small>6/20 درس</small>
+                    </div>
+                    
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <small class="text-muted">تاريخ البدء:</small>
+                        <p class="mb-1">12 ديسمبر 2024</p>
+                      </div>
+                      <div class="col-6">
+                        <small class="text-muted">آخر نشاط:</small>
+                        <p class="mb-1">منذ 3 أيام</p>
+                      </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                      <a href="course-details.html" class="btn btn-primary">استكمال الدراسة</a>
+                      <button class="btn btn-outline-primary">عرض التقدم</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- كورس ثالث نشط -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-5.webp" alt="كورس تطوير الويب" class="course-thumb">
+                  <div class="p-4">
+                    <h5>تطوير تطبيقات الويب المتقدمة</h5>
+                    <p class="text-muted mb-2">البروفيسور أحمد الحسيني</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-active">
+                        <i class="bi bi-play-circle me-1"></i>قيد الدراسة
+                      </span>
+                    </div>
+                    
+                    <div class="progress mb-3" style="height: 8px;">
+                      <div class="progress-bar" role="progressbar" style="width: 15%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                      <small>15% مكتمل</small>
+                      <small>3/20 درس</small>
+                    </div>
+                    
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <small class="text-muted">تاريخ البدء:</small>
+                        <p class="mb-1">18 ديسمبر 2024</p>
+                      </div>
+                      <div class="col-6">
+                        <small class="text-muted">آخر نشاط:</small>
+                        <p class="mb-1">منذ أسبوع</p>
+                      </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                      <a href="course-details.html" class="btn btn-primary">استكمال الدراسة</a>
+                      <button class="btn btn-outline-primary">عرض التقدم</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- تبويب الكورسات المكتملة -->
+          <div class="tab-pane fade" id="completed" role="tabpanel">
+            <div class="section-header">
+              <h3><i class="bi bi-award me-2"></i>الكورسات المكتملة</h3>
+              <p class="text-muted">الكورسات التي تم إكمالها بنجاح</p>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6" data-aos="fade-up">
+                <div class="purchase-card">
+                  <img src="assets/img/education/courses-3.webp" alt="كورس التصميم" class="course-thumb">
+                  <div class="p-4">
+                    <h5>أساسيات التصميم الجرافيكي</h5>
+                    <p class="text-muted mb-2">المصممة نورة عبدالله</p>
+                    
+                    <div class="mb-3">
+                      <span class="status-badge status-completed">
+                        <i class="bi bi-award me-1"></i>مكتمل
+                      </span>
+                    </div>
+                    
+                    <div class="progress mb-3" style="height: 8px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <small class="text-muted">تاريخ الإكمال:</small>
+                        <p class="mb-1">25 نوفمبر 2024</p>
+                      </div>
+                      <div class="col-6">
+                        <small class="text-muted">الدرجة:</small>
+                        <p class="mb-1"><strong>95%</strong></p>
+                      </div>
+                    </div>
+                    
+                    <div class="alert alert-success mb-3">
+                      <i class="bi bi-check-circle me-2"></i>
+                      <strong>تهانينا!</strong> تم إصدار شهادة الإكمال بنجاح
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-success">
+                        <i class="bi bi-download me-2"></i>تحميل الشهادة
+                      </button>
+                      <button class="btn btn-outline-success">إضافة تقييم</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- رسالة توجيهية -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card h-100">
+                  <div class="text-center py-5">
+                    <i class="bi bi-award display-1 text-success mb-4"></i>
+                    <h4>أحسنت!</h4>
+                    <p class="text-muted mb-4">لقد أكملت كورس بنجاح. شارك إنجازك مع الآخرين واستمر في رحلة التعلم.</p>
+                    
+                    <div class="row g-2 mb-4">
+                      <div class="col-6">
+                        <div class="stat-card">
+                          <div class="stat-number">95%</div>
+                          <small>معدل الإنجاز</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="stat-card">
+                          <div class="stat-number">24</div>
+                          <small>تمارين محلولة</small>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary">شارك إنجازك</button>
+                      <a href="courses.html" class="btn btn-outline-primary">اكتشف كورسات جديدة</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- نهاية تبويبات المحتوى -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">منصتي التعليمية</span>
+          </a>
+          <p>منصة تعليمية عربية تقدم دورات تدريبية عالية الجودة في مختلف المجالات التقنية والمهنية.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="courses.html">الكورسات</a></li>
+            <li><a href="instructors.html">المدربون</a></li>
+            <li><a href="my-purchases.html">مشترياتي</a></li>
+            <li><a href="reviews.html">التقييمات</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>فئات الكورسات</h4>
+          <ul>
+            <li><a href="#">تطوير الويب</a></li>
+            <li><a href="#">علم البيانات</a></li>
+            <li><a href="#">التسويق الرقمي</a></li>
+            <li><a href="#">التصميم</a></li>
+            <li><a href="#">الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>معلومات الاتصال</h4>
+          <p>الرياض، المملكة العربية السعودية</p>
+          <p class="mt-4"><strong>البريد الإلكتروني:</strong> <span>info@eduplatform.com</span></p>
+          <p><strong>الدعم الفني:</strong> <span>support@eduplatform.com</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>جميع الحقوق محفوظة لـ</span> <strong class="px-1 sitename">منصتي التعليمية</strong> <span>2024</span></p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // JavaScript للصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+      // تحميل التبويب المناسب من الرابط
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get('tab');
+      
+      if (tabParam) {
+        const tabElement = document.getElementById(tabParam + '-tab');
+        if (tabElement) {
+          const tab = new bootstrap.Tab(tabElement);
+          tab.show();
+        }
+      }
+      
+      // تأثيرات على الكروت
+      const purchaseCards = document.querySelectorAll('.purchase-card');
+      purchaseCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+      
+      // إدارة حذف العناصر من السلة
+      const removeButtons = document.querySelectorAll('.btn-outline-danger');
+      removeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const card = this.closest('.cart-item-card');
+          if (card) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(100px)';
+            card.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+              card.remove();
+              updateCartSummary();
+            }, 500);
+          }
+        });
+      });
+      
+      function updateCartSummary() {
+        // يمكن إضافة منطق لتحديث ملخص السلة هنا
+        console.log('تم تحديث السلة');
+      }
+      
+      // تنشيط المؤثرات
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    });
+  </script>
+
+</body>
+</html>

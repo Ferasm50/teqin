@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ملف المدرب - منصة الدورات التعليمية</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="instructor-profile-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">منصتي التعليمية</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المنصة</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="instructors.html">المدربون</a></li>
+          <li><a href="transactions.html">المعاملات</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+          <li class="dropdown"><a href="#"><span>صفحات أخرى</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">تفاصيل الكورس</a></li>
+              <li><a href="instructor-profile.html" class="active">ملف المدرب</a></li>
+              <li><a href="events.html">الفعاليات</a></li>
+              <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+              <li><a href="terms.html">الشروط</a></li>
+              <li><a href="privacy.html">الخصوصية</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.html">تسجيل الدخول</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">ملف المدرب</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="instructors.html">المدربون</a></li>
+            <li class="current">ملف المدرب</li>
+          </ol>
+        </nav>
+      </div>
+    </div><section id="instructor-profile" class="instructor-profile section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <div class="col-lg-12">
+            <div class="instructor-hero-banner" data-aos="zoom-out" data-aos-delay="200">
+              <div class="hero-background">
+                <img src="assets/img/education/showcase-4.webp" alt="خلفية المدرب" class="img-fluid">
+                <div class="hero-overlay"></div>
+              </div>
+              <div class="hero-content">
+                <div class="instructor-avatar">
+                  <img src="assets/img/education/teacher-7.webp" alt="المدرب أحمد الحسيني" class="img-fluid">
+                  <div class="status-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <span>مدرب موثق</span>
+                  </div>
+                </div>
+                <div class="instructor-info">
+                  <h2>أحمد الحسيني</h2>
+                  <p class="title">خبير قواعد البيانات وتطوير الويب</p>
+                  <div class="credentials">
+                    <span class="credential"><i class="bi bi-award"></i> دكتوراه في علوم الحاسوب</span>
+                    <span class="credential"><i class="bi bi-briefcase"></i> 12+ سنة خبرة</span>
+                    <span class="credential"><i class="bi bi-people"></i> 3,800+ طالب</span>
+                  </div>
+                  <div class="rating-overview">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <span class="rating-text">تقييم 4.8 من 892 تقييم</span>
+                  </div>
+                  <div class="contact-actions">
+                    <a href="#contact-section" class="btn-contact">
+                      <i class="bi bi-envelope"></i>
+                      اتصل بالمدرب
+                    </a>
+                    <div class="social-media">
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-twitter-x"></i></a>
+                      <a href="#"><i class="bi bi-github"></i></a>
+                      <a href="#"><i class="bi bi-medium"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row gy-5 mt-4">
+
+          <div class="col-lg-8">
+            <div class="content-tabs" data-aos="fade-right" data-aos-delay="300">
+
+              <ul class="nav nav-tabs custom-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#instructor-profile-about" type="button" role="tab">
+                    <i class="bi bi-person"></i>
+                    السيرة الذاتية
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructor-profile-courses" type="button" role="tab">
+                    <i class="bi bi-book"></i>
+                    الكورسات
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructor-profile-certificates" type="button" role="tab">
+                    <i class="bi bi-award"></i>
+                    الشهادات
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructor-profile-reviews" type="button" role="tab">
+                    <i class="bi bi-star"></i>
+                    التقييمات
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content custom-tab-content">
+
+                <div class="tab-pane fade show active" id="instructor-profile-about" role="tabpanel">
+                  <div class="about-content">
+                    <div class="bio-section">
+                      <h4>السيرة الذاتية المهنية</h4>
+                      <p>أحمد الحسيني هو خبير في قواعد البيانات وتطوير الويب بخبرة تزيد عن 12 عاماً في مجال تكنولوجيا المعلومات. حاصل على درجة الدكتوراه في علوم الحاسوب من جامعة الملك سعود، ومتخصص في تصميم وتنفيذ قواعد البيانات المعقدة والتطبيقات المرتبطة بها.</p>
+                      <p>بدأ مسيرته المهنية كمطور قواعد بيانات في إحدى الشركات الرائدة في المملكة العربية السعودية، ثم تدرج في المناصب حتى أصبح مديراً لقسم تكنولوجيا المعلومات. خلال مسيرته، قاد العديد من المشاريع التقنية الناجحة وساهم في تطوير أنظمة إدارة البيانات للعديد من المؤسسات الحكومية والخاصة.</p>
+                      <p>يتميز أحمد بشغفه بالتعليم ونقل المعرفة، حيث بدأ التدريب منذ 5 سنوات وقد درب أكثر من 3,800 طالب في مجالات قواعد البيانات وتطوير الويب. يهدف من خلال كورساته إلى تبسيط المفاهيم التقنية المعقدة وجعلها في متناول الجميع.</p>
+                    </div>
+
+                    <div class="expertise-grid">
+                      <h4>مجالات التخصص والخبرة</h4>
+                      <div class="skills-grid">
+                        <div class="skill-item">
+                          <i class="bi bi-database"></i>
+                          <span>قواعد البيانات SQL</span>
+                        </div>
+                        <div class="skill-item">
+                          <i class="bi bi-code-slash"></i>
+                          <span>تطوير الويب</span>
+                        </div>
+                        <div class="skill-item">
+                          <i class="bi bi-graph-up"></i>
+                          <span>تحليل البيانات</span>
+                        </div>
+                        <div class="skill-item">
+                          <i class="bi bi-server"></i>
+                          <span>إدارة الخوادم</span>
+                        </div>
+                        <div class="skill-item">
+                          <i class="bi bi-shield-check"></i>
+                          <span>أمن قواعد البيانات</span>
+                        </div>
+                        <div class="skill-item">
+                          <i class="bi bi-cloud"></i>
+                          <span>الحوسبة السحابية</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="experience-section mt-5">
+                      <h4>الخبرة العملية</h4>
+                      
+                      <div class="experience-timeline">
+                        <div class="experience-item">
+                          <div class="timeline-marker">
+                            <div class="year">2020 - الآن</div>
+                            <div class="dot"></div>
+                          </div>
+                          <div class="experience-details">
+                            <h5>مدير قسم تكنولوجيا المعلومات</h5>
+                            <p class="institution">شركة التقنية المتطورة</p>
+                            <p>الإشراف على فريق مكون من 25 موظفاً، إدارة مشاريع تقنية بقيمة 50 مليون ريال، تطوير استراتيجيات تكنولوجيا المعلومات للشركة.</p>
+                          </div>
+                        </div>
+
+                        <div class="experience-item">
+                          <div class="timeline-marker">
+                            <div class="year">2016 - 2020</div>
+                            <div class="dot"></div>
+                          </div>
+                          <div class="experience-details">
+                            <h5>مستشار قواعد بيانات أول</h5>
+                            <p class="institution">شركة حلول البيانات الذكية</p>
+                            <p>تصميم وتنفيذ قواعد بيانات معقدة، تحسين أداء الأنظمة الحالية، تقديم استشارات تقنية للعملاء من القطاعين العام والخاص.</p>
+                          </div>
+                        </div>
+
+                        <div class="experience-item">
+                          <div class="timeline-marker">
+                            <div class="year">2012 - 2016</div>
+                            <div class="dot"></div>
+                          </div>
+                          <div class="experience-details">
+                            <h5>مطور قواعد بيانات</h5>
+                            <p class="institution">مؤسسة التقنية العربية</p>
+                            <p>تطوير أنظمة إدارة قواعد البيانات، كتابة استعلامات SQL معقدة، صيانة وتحديث الأنظمة الحالية.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="instructor-profile-courses" role="tabpanel">
+                  <div class="courses-grid">
+                    
+                    <div class="course-item">
+                      <div class="course-thumb">
+                        <img src="assets/img/education/courses-5.webp" alt="كورس SQL المتقدم" class="img-fluid">
+                        <div class="course-status active">نشط</div>
+                        <div class="course-level">متقدم</div>
+                      </div>
+                      <div class="course-info">
+                        <h5>SQL المتقدم وتحسين الأداء</h5>
+                        <div class="course-stats">
+                          <span><i class="bi bi-people"></i> 1,234 طالب مسجل</span>
+                          <span><i class="bi bi-star-fill"></i> 4.9</span>
+                          <span><i class="bi bi-question-circle"></i> 24 تمرين</span>
+                        </div>
+                        <p>كورس متخصص في كتابة استعلامات SQL معقدة وتحسين أداء قواعد البيانات.</p>
+                        <div class="course-meta">
+                          <span>مدة الكورس: 8 أسابيع</span>
+                          <span>عدد الدروس: 36 درس</span>
+                        </div>
+                        <div class="price-section">
+                          <span class="price">$149</span>
+                          <a href="course-details.html" class="btn-view-course">عرض الكورس</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="course-item">
+                      <div class="course-thumb">
+                        <img src="assets/img/education/courses-9.webp" alt="كورس MongoDB" class="img-fluid">
+                        <div class="course-status active">نشط</div>
+                        <div class="course-level">متوسط</div>
+                      </div>
+                      <div class="course-info">
+                        <h5>MongoDB: من البداية إلى الاحتراف</h5>
+                        <div class="course-stats">
+                          <span><i class="bi bi-people"></i> 856 طالب مسجل</span>
+                          <span><i class="bi bi-star-fill"></i> 4.7</span>
+                          <span><i class="bi bi-question-circle"></i> 18 تمرين</span>
+                        </div>
+                        <p>تعلم أساسيات قواعد البيانات NoSQL باستخدام MongoDB وتطبيقاتها العملية.</p>
+                        <div class="course-meta">
+                          <span>مدة الكورس: 6 أسابيع</span>
+                          <span>عدد الدروس: 24 درس</span>
+                        </div>
+                        <div class="price-section">
+                          <span class="price">$129</span>
+                          <a href="course-details.html" class="btn-view-course">عرض الكورس</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="course-item">
+                      <div class="course-thumb">
+                        <img src="assets/img/education/courses-12.webp" alt="كورس تحليل البيانات" class="img-fluid">
+                        <div class="course-status active">نشط</div>
+                        <div class="course-level">مبتدئ</div>
+                      </div>
+                      <div class="course-info">
+                        <h5>تحليل البيانات باستخدام SQL و Python</h5>
+                        <div class="course-stats">
+                          <span><i class="bi bi-people"></i> 2,100 طالب مسجل</span>
+                          <span><i class="bi bi-star-fill"></i> 4.8</span>
+                          <span><i class="bi bi-question-circle"></i> 30 تمرين</span>
+                        </div>
+                        <p>كورس شامل لتعلم تحليل البيانات باستخدام SQL و Python مع مشاريع عملية.</p>
+                        <div class="course-meta">
+                          <span>مدة الكورس: 10 أسابيع</span>
+                          <span>عدد الدروس: 42 درس</span>
+                        </div>
+                        <div class="price-section">
+                          <span class="price">$179</span>
+                          <a href="course-details.html" class="btn-view-course">عرض الكورس</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="course-item">
+                      <div class="course-thumb">
+                        <img src="assets/img/education/courses-8.webp" alt="كورس أمن البيانات" class="img-fluid">
+                        <div class="course-status upcoming">قادم قريباً</div>
+                        <div class="course-level">متقدم</div>
+                      </div>
+                      <div class="course-info">
+                        <h5>أمن قواعد البيانات وحماية المعلومات</h5>
+                        <div class="course-stats">
+                          <span><i class="bi bi-people"></i> 450 طالب مسجل</span>
+                          <span><i class="bi bi-star-fill"></i> -</span>
+                          <span><i class="bi bi-question-circle"></i> 20 تمرين</span>
+                        </div>
+                        <p>كورس متخصص في تأمين قواعد البيانات وحماية المعلومات من الاختراقات.</p>
+                        <div class="course-meta">
+                          <span>مدة الكورس: 8 أسابيع</span>
+                          <span>عدد الدروس: 32 درس</span>
+                        </div>
+                        <div class="price-section">
+                          <span class="price">$199</span>
+                          <button class="btn-view-course" disabled>قادم قريباً</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="instructor-profile-certificates" role="tabpanel">
+                  <div class="certificates-grid">
+                    
+                    <div class="certificate-item">
+                      <div class="certificate-icon">
+                        <i class="bi bi-award-fill"></i>
+                      </div>
+                      <div class="certificate-details">
+                        <h5>شهادة Oracle Database Administrator Certified Professional</h5>
+                        <p class="issuer">شركة Oracle العالمية</p>
+                        <p class="date">تم الحصول عليها: 2022</p>
+                        <p class="description">شهادة متقدمة في إدارة قواعد بيانات Oracle، تغطي مواضيع متقدمة في الأداء والأمن.</p>
+                      </div>
+                      <a href="#" class="btn-view-certificate">عرض الشهادة</a>
+                    </div>
+
+                    <div class="certificate-item">
+                      <div class="certificate-icon">
+                        <i class="bi bi-award-fill"></i>
+                      </div>
+                      <div class="certificate-details">
+                        <h5>شهادة Microsoft Certified: Azure Database Administrator Associate</h5>
+                        <p class="issuer">شركة Microsoft</p>
+                        <p class="date">تم الحصول عليها: 2021</p>
+                        <p class="description">شهادة متخصصة في إدارة قواعد البيانات على منصة Microsoft Azure السحابية.</p>
+                      </div>
+                      <a href="#" class="btn-view-certificate">عرض الشهادة</a>
+                    </div>
+
+                    <div class="certificate-item">
+                      <div class="certificate-icon">
+                        <i class="bi bi-award-fill"></i>
+                      </div>
+                      <div class="certificate-details">
+                        <h5>شهادة AWS Certified Database - Specialty</h5>
+                        <p class="issuer">شركة Amazon Web Services</p>
+                        <p class="date">تم الحصول عليها: 2020</p>
+                        <p class="description">شهادة متخصصة في قواعد البيانات على منصة AWS، تشمل كافة خدمات قواعد البيانات.</p>
+                      </div>
+                      <a href="#" class="btn-view-certificate">عرض الشهادة</a>
+                    </div>
+
+                    <div class="certificate-item">
+                      <div class="certificate-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                      </div>
+                      <div class="certificate-details">
+                        <h5>دكتوراه في علوم الحاسوب</h5>
+                        <p class="issuer">جامعة الملك سعود</p>
+                        <p class="date">تم التخرج: 2018</p>
+                        <p class="description">درجة الدكتوراه مع التخصص في تحسين أداء قواعد البيانات الموزعة.</p>
+                      </div>
+                      <a href="#" class="btn-view-certificate">عرض الشهادة</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="instructor-profile-reviews" role="tabpanel">
+                  <div class="reviews-container">
+                    
+                    <div class="reviews-summary">
+                      <div class="overall-rating">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="rating-text">892 تقييم</div>
+                      </div>
+                      <div class="rating-breakdown">
+                        <div class="rating-bar">
+                          <span>5 نجوم</span>
+                          <div class="bar">
+                            <div class="fill" style="width: 75%"></div>
+                          </div>
+                          <span>75%</span>
+                        </div>
+                        <div class="rating-bar">
+                          <span>4 نجوم</span>
+                          <div class="bar">
+                            <div class="fill" style="width: 20%"></div>
+                          </div>
+                          <span>20%</span>
+                        </div>
+                        <div class="rating-bar">
+                          <span>3 نجوم</span>
+                          <div class="bar">
+                            <div class="fill" style="width: 4%"></div>
+                          </div>
+                          <span>4%</span>
+                        </div>
+                        <div class="rating-bar">
+                          <span>2 نجوم</span>
+                          <div class="bar">
+                            <div class="fill" style="width: 1%"></div>
+                          </div>
+                          <span>1%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-card">
+                      <div class="review-header">
+                        <img src="assets/img/person/person-f-12.webp" alt="الطالبة" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                          <h6>سارة محمد</h6>
+                          <p>مهندسة قواعد بيانات في شركة التقنية</p>
+                          <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                        <span class="review-date">منذ 3 أسابيع</span>
+                      </div>
+                      <p>"الكورس كان ممتازاً! المدرب أحمد شرح المفاهيم المعقدة بطريقة مبسطة وسهلة الفهم. التمارين التفاعلية كانت عملية جداً وساعدتني على تطبيق ما تعلمته في عملي مباشرة."</p>
+                      <div class="review-course">
+                        <i class="bi bi-book"></i>
+                        <span>كورس SQL المتقدم وتحسين الأداء</span>
+                      </div>
+                    </div>
+
+                    <div class="review-card">
+                      <div class="review-header">
+                        <img src="assets/img/person/person-m-8.webp" alt="الطالب" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                          <h6>خالد العتيبي</h6>
+                          <p>مطور ويب في شركة الحلول الرقمية</p>
+                          <div class="review-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                        </div>
+                        <span class="review-date">منذ شهر</span>
+                      </div>
+                      <p>"المدرب محترف جداً وملتزم بالإجابة على جميع استفسارات الطلاب. المحتوى غني والشروحات واضحة. أنصح بهذا المدرب لأي شخص يريد تعلم قواعد البيانات باحترافية."</p>
+                      <div class="review-course">
+                        <i class="bi bi-book"></i>
+                        <span>كورس تحليل البيانات باستخدام SQL و Python</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="sidebar-widgets" data-aos="fade-left" data-aos-delay="300">
+
+              <div class="stats-widget">
+                <h4>إحصائيات المدرب</h4>
+                <div class="stats-grid">
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>3,842</h5>
+                      <p>إجمالي الطلاب</p>
+                    </div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>7</h5>
+                      <p>الكورسات المنشطة</p>
+                    </div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>96%</h5>
+                      <p>معدل إكمال الكورسات</p>
+                    </div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>5+</h5>
+                      <p>سنوات التدريس</p>
+                    </div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>4.8</h5>
+                      <p>متوسط التقييم</p>
+                    </div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-icon">
+                      <i class="bi bi-question-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h5>92</h5>
+                      <p>تمرين منشأ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="instructor-balance-widget">
+                <h4>رصيد المدرب</h4>
+                <div class="balance-info">
+                  <div class="balance-item">
+                    <span class="label">إجمالي الأرباح الحالية:</span>
+                    <span class="value">$28,750</span>
+                  </div>
+                  <div class="balance-item">
+                    <span class="label">المبالغ المعلقة:</span>
+                    <span class="value">$3,200</span>
+                  </div>
+                  <div class="balance-item">
+                    <span class="label">تاريخ آخر تحديث:</span>
+                    <span class="value">15 ديسمبر 2024</span>
+                  </div>
+                </div>
+                <div class="balance-actions">
+                  <button class="btn btn-outline-primary btn-sm">عرض الحركات</button>
+                  <button class="btn btn-primary btn-sm">سحب الأرباح</button>
+                </div>
+              </div>
+
+              <div id="contact-section" class="contact-widget">
+                <h4>معلومات التواصل</h4>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>ahmed@eduplatform.com</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+966 50 123 4567</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>الرياض، المملكة العربية السعودية</span>
+                  </div>
+                </div>
+                <div class="office-hours">
+                  <h6>ساعات الاستشارة</h6>
+                  <p>الأحد والثلاثاء والخميس<br>6:00 مساءً - 8:00 مساءً</p>
+                  <small class="text-muted">من خلال المنصة فقط</small>
+                </div>
+                
+                <div class="contact-form mt-4">
+                  <h6>إرسال رسالة للمدرب</h6>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="اكتب رسالتك هنا..."></textarea>
+                  </div>
+                  <button class="btn btn-primary w-100">إرسال الرسالة</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">منصتي التعليمية</span>
+          </a>
+          <p>منصة تعليمية عربية تقدم دورات تدريبية عالية الجودة في مختلف المجالات التقنية والمهنية.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="courses.html">الكورسات</a></li>
+            <li><a href="instructors.html">المدربون</a></li>
+            <li><a href="transactions.html">المعاملات</a></li>
+            <li><a href="reviews.html">التقييمات</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>فئات الكورسات</h4>
+          <ul>
+            <li><a href="#">تطوير الويب</a></li>
+            <li><a href="#">علم البيانات</a></li>
+            <li><a href="#">التسويق الرقمي</a></li>
+            <li><a href="#">التصميم</a></li>
+            <li><a href="#">الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>معلومات الاتصال</h4>
+          <p>الرياض، المملكة العربية السعودية</p>
+          <p class="mt-4"><strong>البريد الإلكتروني:</strong> <span>info@eduplatform.com</span></p>
+          <p><strong>الدعم الفني:</strong> <span>support@eduplatform.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>جميع الحقوق محفوظة لـ</span> <strong class="px-1 sitename">منصتي التعليمية</strong> <span>2024</span></p>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // JavaScript لإدارة التبويبات والتقييمات
+    document.addEventListener('DOMContentLoaded', function() {
+      // تنشيط التبويب الأول تلقائياً
+      const firstTab = document.querySelector('.custom-tabs .nav-link');
+      const firstTabContent = document.querySelector('.custom-tab-content .tab-pane');
+      
+      if (firstTab && firstTabContent) {
+        firstTab.classList.add('active');
+        firstTabContent.classList.add('show', 'active');
+      }
+      
+      // تحليل تقييمات النجوم
+      const ratingBars = document.querySelectorAll('.rating-bar .fill');
+      ratingBars.forEach(bar => {
+        const width = bar.style.width;
+        // يمكن إضافة تأثيرات إضافية هنا
+      });
+      
+      // إرسال رسالة للمدرب
+      const contactForm = document.querySelector('.contact-form button');
+      const messageTextarea = document.querySelector('.contact-form textarea');
+      
+      if (contactForm) {
+        contactForm.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          if (messageTextarea.value.trim() === '') {
+            alert('يرجى كتابة رسالة قبل الإرسال');
+            messageTextarea.focus();
+            return;
+          }
+          
+          // هنا يمكن إضافة منطق إرسال الرسالة
+          alert('تم إرسال رسالتك بنجاح. سيقوم المدرب بالرد عليك في أقرب وقت.');
+          messageTextarea.value = '';
+        });
+      }
+      
+      // تنقل سلس إلى أقسام الصفحة
+      const contactBtn = document.querySelector('.btn-contact');
+      if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+          const target = this.getAttribute('href');
+          if (target.startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      }
+      
+      // تحميل المزيد من التقييمات
+      const loadMoreReviews = document.createElement('div');
+      loadMoreReviews.className = 'text-center mt-4';
+      loadMoreReviews.innerHTML = '<button class="btn btn-outline-primary" id="loadMoreReviews">تحميل المزيد من التقييمات</button>';
+      
+      const reviewsContainer = document.querySelector('.reviews-container');
+      if (reviewsContainer) {
+        reviewsContainer.appendChild(loadMoreReviews);
+        
+        document.getElementById('loadMoreReviews').addEventListener('click', function() {
+          // هنا يمكن إضافة منطق تحميل المزيد من التقييمات
+          alert('جاري تحميل المزيد من التقييمات...');
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

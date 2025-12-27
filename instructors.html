@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>المدربون - منصة الدورات التعليمية</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="instructors-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">منصتي التعليمية</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المنصة</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="instructors.html" class="active">المدربون</a></li>
+          <li><a href="transactions.html">المعاملات</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+          <li class="dropdown"><a href="#"><span>صفحات أخرى</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">تفاصيل الكورس</a></li>
+              <li><a href="instructor-profile.html">ملف المدرب</a></li>
+              <li><a href="events.html">الفعاليات</a></li>
+              <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+              <li><a href="terms.html">الشروط</a></li>
+              <li><a href="privacy.html">الخصوصية</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.html">تسجيل الدخول</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">المدربون</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li class="current">المدربون</li>
+          </ol>
+        </nav>
+      </div>
+    </div><section id="instructors" class="instructors section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>قابل فريقنا من المدربين الخبراء</h2>
+        <p>تعلم من محترفين ذوي خبرة واسعة في مجالاتهم، معتمدين على منهجيات تعليمية حديثة</p>
+      </div><div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8">
+            <div class="instructors-filters" data-aos="fade-up" data-aos-delay="100">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="filter-group">
+                    <label class="form-label">بحث عن مدرب</label>
+                    <input type="text" class="form-control" placeholder="اسم المدرب أو التخصص">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="filter-group">
+                    <label class="form-label">التخصص</label>
+                    <select class="form-select">
+                      <option value="">جميع التخصصات</option>
+                      <option value="web">تطوير الويب</option>
+                      <option value="data">علم البيانات</option>
+                      <option value="marketing">التسويق الرقمي</option>
+                      <option value="design">التصميم</option>
+                      <option value="business">الأعمال</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="filter-group">
+                    <label class="form-label">الترتيب حسب</label>
+                    <select class="form-select">
+                      <option value="rating">الأعلى تقييماً</option>
+                      <option value="courses">الأكثر كورسات</option>
+                      <option value="students">الأكثر طلاب</option>
+                      <option value="new">الأحدث</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="verified"><i class="bi bi-patch-check-fill"></i> موثق</span>
+              </div>
+              <img src="assets/img/person/person-m-1.webp" class="img-fluid" alt="المدرب جون">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>جون دو</h4></a>
+                <span class="specialty">خبير تطوير الويب</span>
+                <p class="instructor-bio">
+                  محترف بخبرة 15 عاماً في تطوير تطبيقات الويب واسعة النطاق. حاصل على شهادات متقدمة في JavaScript و React.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>8 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>2,500+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.8 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">JavaScript</span>
+                  <span class="expertise-tag">React</span>
+                  <span class="expertise-tag">Node.js</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="featured"><i class="bi bi-award-fill"></i> مميز</span>
+              </div>
+              <img src="assets/img/person/person-f-2.webp" class="img-fluid" alt="المدربة سارة">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>سارة جونسون</h4></a>
+                <span class="specialty">أخصائية تسويق رقمي</span>
+                <p class="instructor-bio">
+                  قائدة فكرية في استراتيجيات التسويق الحديثة وتحسين محركات البحث (SEO). مدربة معتمدة من جوجل.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>6 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>3,100+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.9 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">SEO</span>
+                  <span class="expertise-tag">Marketing</span>
+                  <span class="expertise-tag">Content</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="verified"><i class="bi bi-patch-check-fill"></i> موثق</span>
+              </div>
+              <img src="assets/img/person/person-m-3.webp" class="img-fluid" alt="المدرب مايكل">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>د. مايكل تشن</h4></a>
+                <span class="specialty">عالم بيانات</span>
+                <p class="instructor-bio">
+                  متخصص في التعلم الآلي والنمذجة الإحصائية وتحليل البيانات الضخمة. حاصل على دكتوراه في الذكاء الاصطناعي.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>7 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>2,800+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.7 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">Python</span>
+                  <span class="expertise-tag">ML</span>
+                  <span class="expertise-tag">Data Science</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-medium"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="new"><i class="bi bi-star-fill"></i> جديد</span>
+              </div>
+              <img src="assets/img/person/person-f-4.webp" class="img-fluid" alt="المدربة إيميلي">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>إيميلي واتسون</h4></a>
+                <span class="specialty">مصممة UX/UI</span>
+                <p class="instructor-bio">
+                  تركز على تصميم تجارب مستخدم ممتعة وبديهية عبر مختلف المنصات. عملت مع شركات عالمية مثل Apple و Google.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>5 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>1,900+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.6 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">UI Design</span>
+                  <span class="expertise-tag">UX Research</span>
+                  <span class="expertise-tag">Figma</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-dribbble"></i></a>
+                  <a href=""><i class="bi bi-behance"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="verified"><i class="bi bi-patch-check-fill"></i> موثق</span>
+              </div>
+              <img src="assets/img/person/person-m-5.webp" class="img-fluid" alt="المدرب روبرت">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>روبرت أندرسون</h4></a>
+                <span class="specialty">مستشار استراتيجية أعمال</span>
+                <p class="instructor-bio">
+                  يساعد الشركات على النمو من خلال صياغة استراتيجيات فعالة وتنفيذها. خبرة 20 سنة في الاستشارات الإدارية.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>9 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>3,500+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.8 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">Strategy</span>
+                  <span class="expertise-tag">Management</span>
+                  <span class="expertise-tag">Leadership</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="featured"><i class="bi bi-award-fill"></i> مميز</span>
+              </div>
+              <img src="assets/img/person/person-f-6.webp" class="img-fluid" alt="المدربة ليزا">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>ليزا مارتينيز</h4></a>
+                <span class="specialty">خبيرة الأمن السيبراني</span>
+                <p class="instructor-bio">
+                  متخصصة في حماية الأنظمة والبيانات من التهديدات السيبرانية. تعمل كخبير أمن معلومات في شركات Fortune 500.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>4 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>2,200+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.9 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">Cybersecurity</span>
+                  <span class="expertise-tag">Networking</span>
+                  <span class="expertise-tag">Ethical Hacking</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="verified"><i class="bi bi-patch-check-fill"></i> موثق</span>
+              </div>
+              <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="المدرب ديفيد">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>ديفيد لي</h4></a>
+                <span class="specialty">مطور تطبيقات جوال</span>
+                <p class="instructor-bio">
+                  يركز على بناء تطبيقات جوال عالية الأداء باستخدام أحدث التقنيات. مؤسس شركة ناشئة ناجحة في مجال تطبيقات الجوال.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>6 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>2,600+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.7 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">iOS</span>
+                  <span class="expertise-tag">Android</span>
+                  <span class="expertise-tag">Flutter</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-stack-overflow"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="new"><i class="bi bi-star-fill"></i> جديد</span>
+              </div>
+              <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="المدربة ماريا">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>ماريا سانشيز</h4></a>
+                <span class="specialty">مدربة تطوير شخصي</span>
+                <p class="instructor-bio">
+                  تساعد الأفراد على إطلاق إمكاناتهم وتحقيق أهدافهم المهنية. خبيرة في مهارات التواصل والقيادة والتطوير الوظيفي.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>8 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>3,800+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.8 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">Leadership</span>
+                  <span class="expertise-tag">Communication</span>
+                  <span class="expertise-tag">Career Growth</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="instructor-card">
+              <div class="instructor-badge">
+                <span class="verified"><i class="bi bi-patch-check-fill"></i> موثق</span>
+              </div>
+              <img src="assets/img/person/person-m-9.webp" class="img-fluid" alt="المدرب أحمد">
+              <div class="instructor-content">
+                <a href="instructor-profile.html"><h4>أحمد الحسيني</h4></a>
+                <span class="specialty">خبير قواعد البيانات</span>
+                <p class="instructor-bio">
+                  متخصص في إدارة وتحليل قواعد البيانات. حاصل على شهادات متقدمة في Oracle و SQL Server و MongoDB.
+                </p>
+                <div class="instructor-stats">
+                  <div class="stat">
+                    <i class="bi bi-play-circle"></i>
+                    <span>5 كورسات</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-people"></i>
+                    <span>1,800+ طالب</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.5 تقييم</span>
+                  </div>
+                </div>
+                <div class="instructor-expertise">
+                  <span class="expertise-tag">SQL</span>
+                  <span class="expertise-tag">Oracle</span>
+                  <span class="expertise-tag">MongoDB</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-medium"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="instructors-stats" data-aos="fade-up">
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3>50+</h3>
+                    <p>مدرب خبير</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-play-circle-fill"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3>300+</h3>
+                    <p>كورس فعال</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3>4.8</h3>
+                    <p>متوسط التقييم</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-award-fill"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3>100%</h3>
+                    <p>مدربين معتمدين</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><section id="become-instructor" class="become-instructor section light-background">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8" data-aos="fade-right">
+            <div class="become-content">
+              <h2>هل ترغب في أن تصبح مدرباً معنا؟</h2>
+              <p>انضم إلى فريقنا من المدربين الخبراء وشارك معرفتك مع آلاف الطلاب المتحمسين للتعلم.</p>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <i class="bi bi-cash-coin"></i>
+                  <div>
+                    <h5>دخل إضافي مستمر</h5>
+                    <p>احصل على نسبة من أرباح كورساتك بشكل مستمر.</p>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <i class="bi bi-globe"></i>
+                  <div>
+                    <h5>وصول عالمي</h5>
+                    <p>وصل إلى طلاب من جميع أنحاء العالم عبر منصتنا.</p>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <i class="bi bi-tools"></i>
+                  <div>
+                    <h5>أدوات متكاملة</h5>
+                    <p>استخدم أدواتنا المتقدمة لإنشاء وإدارة كورساتك بسهولة.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-left">
+            <div class="become-action text-center">
+              <i class="bi bi-person-plus-fill display-1 text-primary mb-4"></i>
+              <h4>ابدأ رحلتك كمدرب</h4>
+              <p class="mb-4">سجل الآن وابدأ في إنشاء كورسك الأول</p>
+              <a href="instructor-application.html" class="btn btn-primary btn-lg">تقديم طلب التدريب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section></main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">منصتي التعليمية</span>
+          </a>
+          <p>منصة تعليمية عربية تقدم دورات تدريبية عالية الجودة في مختلف المجالات التقنية والمهنية.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="courses.html">الكورسات</a></li>
+            <li><a href="instructors.html">المدربون</a></li>
+            <li><a href="transactions.html">المعاملات</a></li>
+            <li><a href="reviews.html">التقييمات</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>فئات الكورسات</h4>
+          <ul>
+            <li><a href="#">تطوير الويب</a></li>
+            <li><a href="#">علم البيانات</a></li>
+            <li><a href="#">التسويق الرقمي</a></li>
+            <li><a href="#">التصميم</a></li>
+            <li><a href="#">الأعمال</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>معلومات الاتصال</h4>
+          <p>الرياض، المملكة العربية السعودية</p>
+          <p class="mt-4"><strong>البريد الإلكتروني:</strong> <span>info@eduplatform.com</span></p>
+          <p><strong>الدعم الفني:</strong> <span>support@eduplatform.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>جميع الحقوق محفوظة لـ</span> <strong class="px-1 sitename">منصتي التعليمية</strong> <span>2024</span></p>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // JavaScript للبحث والفلترة
+    document.addEventListener('DOMContentLoaded', function() {
+      // البحث عن المدربين
+      const searchInput = document.querySelector('.instructors-filters input[type="text"]');
+      const specialtySelect = document.querySelector('.instructors-filters select:nth-of-type(1)');
+      const sortSelect = document.querySelector('.instructors-filters select:nth-of-type(2)');
+      
+      function filterInstructors() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedSpecialty = specialtySelect.value;
+        const sortBy = sortSelect.value;
+        
+        const instructorCards = document.querySelectorAll('.instructor-card');
+        
+        instructorCards.forEach(card => {
+          const name = card.querySelector('h4').textContent.toLowerCase();
+          const specialty = card.querySelector('.specialty').textContent.toLowerCase();
+          const bio = card.querySelector('.instructor-bio').textContent.toLowerCase();
+          const expertise = card.querySelector('.instructor-expertise').textContent.toLowerCase();
+          
+          let matchesSearch = true;
+          let matchesSpecialty = true;
+          
+          // البحث النصي
+          if (searchTerm) {
+            matchesSearch = name.includes(searchTerm) || 
+                           specialty.includes(searchTerm) || 
+                           bio.includes(searchTerm) ||
+                           expertise.includes(searchTerm);
+          }
+          
+          // فلترة حسب التخصص
+          if (selectedSpecialty) {
+            // يمكن تحسين هذه المنطق بناءً على التصنيفات الفعلية
+            matchesSpecialty = specialty.includes(selectedSpecialty) || 
+                              expertise.includes(selectedSpecialty);
+          }
+          
+          // إظهار أو إخفاء البطاقة
+          if (matchesSearch && matchesSpecialty) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // الترتيب حسب المعيار المحدد
+        // يمكن إضافة منطق الترتيب هنا
+      }
+      
+      // إضافة مستمعات الأحداث
+      searchInput.addEventListener('keyup', filterInstructors);
+      specialtySelect.addEventListener('change', filterInstructors);
+      sortSelect.addEventListener('change', filterInstructors);
+      
+      // إضافة تأثير عند التمرير على بطاقات المدربين
+      const instructorCards = document.querySelectorAll('.instructor-card');
+      instructorCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
